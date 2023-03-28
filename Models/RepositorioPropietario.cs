@@ -68,8 +68,8 @@ public Propietarios ObtenerPropietario(int id)
                 Id = reader.GetInt32(nameof(Propietarios.Id)),
                 Nombre = reader.GetString(nameof(Propietarios.Nombre)),
                 Apellido = reader.GetString(nameof(Propietarios.Apellido)),
-                Dni = reader.GetInt32(nameof(Propietarios.Dni)),
-                Telefono = reader.GetInt32(nameof(Propietarios.Telefono)),
+                Dni = reader.GetInt64(nameof(Propietarios.Dni)),
+                Telefono = reader.GetInt64(nameof(Propietarios.Telefono)),
                 Email = reader.GetString(nameof(Propietarios.Email)),
                 Direccion = reader.GetString(nameof(Propietarios.Direccion)), 
                 Nacimiento = reader.GetDateTime(nameof(Propietarios.Nacimiento))

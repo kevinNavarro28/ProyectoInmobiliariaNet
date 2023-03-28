@@ -50,7 +50,8 @@
         
           
             <td>
-               <i class="fa-solid fa-plus"></i> @Html.ActionLink("Editar", "EditarInquilino", new {  id=item.Id  }) |
+                
+               <i class="fa-solid fa-delete-left"></i> @Html.ActionLink("Editar", "EditarInquilino", new {  id=item.Id  }) |
 
                 @Html.ActionLink("Detalles", "DetalleInquilino", new { id=item.Id }) |
                @Html.ActionLink("Borrar", "BorrarInquilino", new {  id=item.Id })
