@@ -7,7 +7,7 @@
 <h1>Lista de Inquilinos</h1>
 
 <p>
-    <a asp-action="CrearInquilino">Crear Inquilino</a>
+    <a asp-action="CrearInquilino" class="btn btn-primary"><i class="fa-solid fa-person-circle-plus fa-xl" style="color: #000000;"></i></a>
 </p>
 <table class="table">
     <thead>
@@ -51,10 +51,18 @@
           
             <td>
                 
-               <i class="fa-solid fa-delete-left"></i> @Html.ActionLink("Editar", "EditarInquilino", new {  id=item.Id  }) |
+                        <a href='@Url.Action("EditarInquilino", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
 
-                @Html.ActionLink("Detalles", "DetalleInquilino", new { id=item.Id }) |
-               @Html.ActionLink("Borrar", "BorrarInquilino", new {  id=item.Id })
+				</a>
+                  <a href='@Url.Action("DetalleInquilino", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-neuter fa-lg" style="color: #000000;"></i>
+
+				</a>
+                  <a href='@Url.Action("BorrarInquilino", new { id = item.Id })' class="btn btn-sm btn-danger">
+										<i class="fa-solid fa-user-xmark" style="color: #000000;"></i>
+
+				</a>
             </td>
         </tr>
 }

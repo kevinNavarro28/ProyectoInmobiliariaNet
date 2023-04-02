@@ -4,7 +4,7 @@
     ViewData["Title"] = "Detalle Propietario";
 }
 
-<h1>Detalle Propietario</h1>
+<h1>Detalle de Propietario</h1>
 
 <div>
     <h4>Propietarios</h4>
@@ -55,6 +55,10 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "EditarPropietario", new { id = Model.Id }) |
-    <a asp-action="IndexP">Volver</a>
+          <a asp-action="IndexP"><i class="fa-solid fa-left-long fa-2xl" style="color: #005eff;"></i></a> |
+   <td>
+                 <a href='@Url.Action("EditarPropietario", new { id = Model.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
 </div>

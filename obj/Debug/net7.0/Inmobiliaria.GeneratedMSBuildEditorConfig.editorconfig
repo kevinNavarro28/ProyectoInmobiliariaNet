@@ -9,77 +9,137 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Inmobiliaria
 build_property.RootNamespace = Inmobiliaria
-build_property.ProjectDir = D:\ulp\ULP\2023 1er cuatrimestre\Programacion .NET\practica\Inmobiliaria\
+build_property.ProjectDir = d:\ulp\ULP\2023 1er cuatrimestre\Programacion .NET\practica\Inmobiliaria\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\ulp\ULP\2023 1er cuatrimestre\Programacion .NET\practica\Inmobiliaria
+build_property.MSBuildProjectDirectory = d:\ulp\ULP\2023 1er cuatrimestre\Programacion .NET\practica\Inmobiliaria
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Home/Index.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Contraros/BorrarContrato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhcm9zXEJvcnJhckNvbnRyYXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Contraros/CrearContrato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhcm9zXENyZWFyQ29udHJhdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Contraros/DetalleContrato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhcm9zXERldGFsbGVDb250cmF0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Contraros/EditarContrato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhcm9zXEVkaXRhckNvbnRyYXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Contraros/IndexC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhcm9zXEluZGV4Qy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Home/Privacy.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/BorrarInquilino.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inmuebles/BorrarInmueble.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEJvcnJhcklubXVlYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inmuebles/CrearInmueble.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXENyZWFySW5tdWVibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inmuebles/DetalleInmueble.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXERldGFsbGVJbm11ZWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inmuebles/EditarInmueble.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEVkaXRhcklubXVlYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inmuebles/IndexIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEluZGV4SW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/BorrarInquilino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5xdWlsaW5vc1xCb3JyYXJJbnF1aWxpbm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/CrearInquilino.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/CrearInquilino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5xdWlsaW5vc1xDcmVhcklucXVpbGluby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/DetalleInquilino.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/DetalleInquilino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5xdWlsaW5vc1xEZXRhbGxlSW5xdWlsaW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/EditarInquilino.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/EditarInquilino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5xdWlsaW5vc1xFZGl0YXJJbnF1aWxpbm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/IndexI.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Inquilinos/IndexI.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5xdWlsaW5vc1xJbmRleEkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/BorrarPropietario.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Pagos/BorrarPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb3NcQm9ycmFyUGFnby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Pagos/CrearPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb3NcQ3JlYXJQYWdvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Pagos/DetallePago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb3NcRGV0YWxsZVBhZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Pagos/EditarPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb3NcRWRpdGFyUGFnby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Pagos/IndexP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb3NcSW5kZXhQLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/BorrarPropietario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGlldGFyaW9zXEJvcnJhclByb3BpZXRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/CrearPropietario.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/CrearPropietario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGlldGFyaW9zXENyZWFyUHJvcGlldGFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/DetallePropietario.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/DetallePropietario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGlldGFyaW9zXERldGFsbGVQcm9waWV0YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/EditarPropietario.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/EditarPropietario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGlldGFyaW9zXEVkaXRhclByb3BpZXRhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/IndexP.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Propietarios/IndexP.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGlldGFyaW9zXEluZGV4UC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/Error.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/_ValidationScriptsPartial.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/_ViewImports.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/_ViewStart.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/_Layout.cshtml]
+[d:/ulp/ULP/2023 1er cuatrimestre/Programacion .NET/practica/Inmobiliaria/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7tmy77id6k

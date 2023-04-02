@@ -59,7 +59,7 @@ namespace inmobiliaria.Controllers
 
                
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }
@@ -83,7 +83,7 @@ namespace inmobiliaria.Controllers
 
                 return RedirectToAction(nameof(IndexI));
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }
@@ -107,7 +107,7 @@ namespace inmobiliaria.Controllers
 
                 return RedirectToAction(nameof(IndexI));
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }

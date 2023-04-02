@@ -4,7 +4,7 @@
     ViewData["Title"] = "Detalle Inquilino";
 }
 
-<h1>Detalles del Inquilino</h1>
+<h1>Detalles de Inquilino</h1>
 
 <div>
     <h4>Inquilino</h4>
@@ -61,6 +61,11 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "EditarInquilino", new { id = Model.Id}) |
-    <a asp-action="IndexI">Volver</a>
+        <a asp-action="IndexI"><i class="fa-solid fa-left-long fa-2xl" style="color: #005eff;"></i></a> |
+   <td>
+                 <a href='@Url.Action("EditarInquilino", new { id = Model.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
+
 </div>

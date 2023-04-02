@@ -12,7 +12,7 @@
 <h1>Lista de Propietarios</h1>
 
 <p>
-   <a asp-action="CrearPropietario">Crear Propietario</a>
+   <a asp-action="CrearPropietario" class="btn btn-primary"><i class="fa-solid fa-person-circle-plus fa-xl" style="color: #000000;"></i></a>
 </p>
 <table class="table">
     
@@ -56,10 +56,19 @@
             </td>
           
             <td>
-           
-                @Html.ActionLink("Editar", "EditarPropietario", new {  id=item.Id }) | 
-                @Html.ActionLink("Detalles", "DetallePropietario", new {  id=item.Id}) |
-                @Html.ActionLink("Borrar", "BorrarPropietario", new { id=item.Id})
+                 <a href='@Url.Action("EditarPropietario", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
+                  <a href='@Url.Action("DetallePropietario", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-neuter fa-lg" style="color: #000000;"></i>
+
+				</a>
+                  <a href='@Url.Action("BorrarPropietario", new { id = item.Id })' class="btn btn-sm btn-danger">
+										<i class="fa-solid fa-user-xmark" style="color: #000000;"></i>
+
+				</a>
+       
             </td>
         </tr>
 }
