@@ -1,0 +1,65 @@
+@model IEnumerable<Inmobiliaria.Models.Contratos>
+
+@{
+    ViewData["Title"] = "IndexC";
+    var listaInmueble=(List<Inmuebles>)ViewBag.Inmuebles;
+    var listaInquilino = (List<Inquilinos>)ViewBag.Inquilinos;
+
+}
+
+<h1>Lista de Contratos</h1>
+
+<p>
+    <a asp-action="CrearContrato" class="btn btn-primary"><i class="fa-solid fa-person-circle-plus fa-xl" style="color: #000000;"></i></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InmuebleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InquilinoId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InmuebleId)
+            </td>
+            <td>
+                
+                @Html.DisplayFor(modelItem => item.InquilinoId)
+            </td>
+            <td>
+                   <a href='@Url.Action("EditarContrato", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
+                  <a href='@Url.Action("DetalleContrato", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-neuter fa-lg" style="color: #000000;"></i>
+
+				</a>
+                  <a href='@Url.Action("BorrarContrato", new { id = item.Id})' class="btn btn-sm btn-danger">
+										<i class="fa-solid fa-user-xmark" style="color: #000000;"></i>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

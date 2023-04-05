@@ -2,9 +2,10 @@
 
 @{
     ViewData["Title"] = "CrearPago";
+    var listaContrato=(List<Contratos>)ViewBag.Contrato;
 }
 
-<h1>CrearPago</h1>
+<h1>Crear Pago</h1>
 
 <h4>Pagos</h4>
 <hr />
@@ -12,29 +13,36 @@
     <div class="col-md-4">
         <form asp-action="CrearPago">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NumDePago" class="control-label"></label>
-                <input asp-for="NumDePago" class="form-control" />
-                <span asp-validation-for="NumDePago" class="text-danger"></span>
+             <div class="form-group">
+                <label asp-for="Fecha_Pago" class="control-label"></label>
+                <input asp-for="Fecha_Pago" class="form-control" />
+                <span asp-validation-for="Fecha_Pago" class="text-danger"></span>
             </div>
+          
             <div class="form-group">
                 <label asp-for="Importe" class="control-label"></label>
                 <input asp-for="Importe" class="form-control" />
                 <span asp-validation-for="Importe" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="idContrato" class="control-label"></label>
-                <input asp-for="idContrato" class="form-control" />
-                <span asp-validation-for="idContrato" class="text-danger"></span>
+                <label asp-for="ContratoId" class="control-label"></label>
+                 <select class="form-control" name="ContratoId">
+
+                    @foreach (var item in listaContrato)
+                    {
+                        <option value="@item.Id">@(item.Id) </option>
+                    }
+                </select>
+                <span asp-validation-for="ContratoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="IndexP"><i class="fa-solid fa-left-long fa-2xl" style="color: #005eff;"></i></a> 
 </div>
 

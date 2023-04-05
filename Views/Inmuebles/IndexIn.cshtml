@@ -4,17 +4,15 @@
     ViewData["Title"] = "IndexI";
 }
 
-<h1>IndexI</h1>
+<h1>Lista de Inmuebles</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CrearInmueble" class="btn btn-primary"><i class="fa-solid fa-person-circle-plus fa-xl" style="color: #000000;"></i></a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
+           
             <th>
                 @Html.DisplayNameFor(model => model.Tipo)
             </th>
@@ -24,20 +22,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.Uso)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cantidad_Ambientes)
-            </th>
+          
             <th>
                 @Html.DisplayNameFor(model => model.Superficie)
             </th>
+        
             <th>
-                @Html.DisplayNameFor(model => model.Latitud)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Longitud)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPropietadio)
+                @Html.DisplayNameFor(model => model.PropietarioId)
             </th>
             <th></th>
         </tr>
@@ -45,9 +36,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
+          
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo)
             </td>
@@ -57,27 +46,27 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Uso)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cantidad_Ambientes)
-            </td>
+          
             <td>
                 @Html.DisplayFor(modelItem => item.Superficie)
             </td>
+        
             <td>
-                @Html.DisplayFor(modelItem => item.Latitud)
+                @(item.propietario.Nombre + " " + item.propietario.Apellido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Longitud)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPropietadio)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a href='@Url.Action("EditarInmueble", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
+                  <a href='@Url.Action("DetalleInmueble", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-neuter fa-lg" style="color: #000000;"></i>
+
+				</a>
+                  <a href='@Url.Action("BorrarInmueble", new { id = item.Id})' class="btn btn-sm btn-danger">
+										<i class="fa-solid fa-user-xmark" style="color: #000000;"></i>
             </td>
         </tr>
-}
+}    
     </tbody>
 </table>

@@ -12,32 +12,31 @@ public RepositorioPago()
 
 }
 
-public List<Inquilinos>GetInquilinos()
+public List<Pagos>GetPagos()
 {
-    List<Inquilinos> inquilinos = new List<Inquilinos>(); 
+    List<Pagos> pagos = new List<Pagos>(); 
     
     using (MySqlConnection connection = new MySqlConnection(connectionString)) 
     {
-        var query = @"SELECT Id,Nombre,Apellido,Dni,Telefono,Email,Direccion,Nacimiento FROM inquilinos ";
+        var query = @"SELECT Id,Fecha_Pago,Importe,ContratoId FROM pagos p";
         using(var command = new MySqlCommand(query , connection)){
         connection.Open();
         using (var reader = command.ExecuteReader()){
             while(reader.Read())
             {
-                Inquilinos inquilino = new Inquilinos
+                Pagos pago = new Pagos
                 { 
-                Id = reader.GetInt32(nameof(Inquilinos.Id)),
-                Nombre = reader.GetString(nameof(Inquilinos.Nombre)),
-                Apellido = reader.GetString(nameof(Inquilinos.Apellido)),
-                Dni = reader.GetInt64(nameof(Inquilinos.Dni)),
-                Telefono = reader.GetInt64(nameof(Inquilinos.Telefono)),
-                Email = reader.GetString(nameof(Inquilinos.Email)),
-                Direccion = reader.GetString(nameof(Inquilinos.Direccion)), 
-                Nacimiento = reader.GetDateTime(nameof(Inquilinos.Nacimiento))
-                
+                Id = reader.GetInt32(nameof(Pagos.Id)),
+                Fecha_Pago = reader.GetDateTime(nameof(Pagos.Fecha_Pago)),
+                Importe = reader.GetInt32(nameof(Pagos.Importe)),
+                ContratoId = reader.GetInt32(nameof(Pagos.ContratoId)),
+                Contrato = new Contratos{
+                    Id = reader.GetInt32(nameof(Contratos.Id)),
+                }
+               
 
                 };
-                inquilinos.Add(inquilino);
+                pagos.Add(pago);
 
             }
         }
@@ -45,35 +44,30 @@ public List<Inquilinos>GetInquilinos()
      }
      connection.Close();
     } 
-    return inquilinos;  
+    return pagos;  
 
 }
-public Inquilinos ObtenerInquilino(int id)
+public Pagos ObtenerPago(int Id)
 {
-    Inquilinos res = null;
+    Pagos res = null;
     
     using (MySqlConnection connection = new MySqlConnection(connectionString)) 
     {
-        var query = @"SELECT Id,Nombre,Apellido,Dni,Telefono,Email,Direccion,Nacimiento 
-        FROM inquilinos 
+        var query = @"SELECT Id,Fecha_Pago,Importe,ContratoId 
+        FROM pagos
         WHERE Id = @Id";
         using(var command = new MySqlCommand(query , connection)){
-            command.Parameters.AddWithValue("@Id", id);
+            command.Parameters.AddWithValue("@Id", Id);
         connection.Open();
         using (var reader = command.ExecuteReader()){
             if(reader.Read())
             {
-                res = new Inquilinos
+                res = new Pagos
                 { 
-                Id = reader.GetInt32(nameof(Inquilinos.Id)),
-                Nombre = reader.GetString(nameof(Inquilinos.Nombre)),
-                Apellido = reader.GetString(nameof(Inquilinos.Apellido)),
-                Dni = reader.GetInt64(nameof(Inquilinos.Dni)),
-                Telefono = reader.GetInt64(nameof(Inquilinos.Telefono)),
-                Email = reader.GetString(nameof(Inquilinos.Email)),
-                Direccion = reader.GetString(nameof(Inquilinos.Direccion)), 
-                Nacimiento = reader.GetDateTime(nameof(Inquilinos.Nacimiento))
-                
+                Id = reader.GetInt32(nameof(Pagos.Id)),
+                Fecha_Pago = reader.GetDateTime(nameof(Pagos.Fecha_Pago)),
+                Importe = reader.GetInt32(nameof(Pagos.Importe)),
+                ContratoId = reader.GetInt32(nameof(Pagos.ContratoId)),
 
                 };
               
@@ -88,21 +82,19 @@ public Inquilinos ObtenerInquilino(int id)
 
 }
 
-public int Alta(Inquilinos inquilino){
+public int Alta(Pagos pagos){
 int res = 0;
 using(MySqlConnection connection = new MySqlConnection(connectionString))
 {
-    string query = @"INSERT INTO inquilinos ( nombre,apellido,dni,telefono,email,direccion,nacimiento)
-    VALUES (@nombre,@apellido,@dni,@telefono,@email,@direccion,@nacimiento);
+    string query = @"INSERT INTO pagos (Fecha_Pago,Importe,ContratoId)
+    VALUES (@fecha_pago,@importe,@ContratoId);
     SELECT LAST_INSERT_ID();";
     using(MySqlCommand command = new MySqlCommand (query,connection)){
-        command.Parameters.AddWithValue("@nombre",inquilino.Nombre);
-        command.Parameters.AddWithValue("@apellido",inquilino.Apellido);
-        command.Parameters.AddWithValue("@dni",inquilino.Dni);
-        command.Parameters.AddWithValue("@telefono",inquilino.Telefono);
-        command.Parameters.AddWithValue("@email",inquilino.Email);
-        command.Parameters.AddWithValue("@direccion",inquilino.Direccion);
-        command.Parameters.AddWithValue("@nacimiento",inquilino.Nacimiento);
+        
+        command.Parameters.AddWithValue("@fecha_pago",pagos.Fecha_Pago);
+        command.Parameters.AddWithValue("@importe",pagos.Importe);
+        command.Parameters.AddWithValue("@ContratoId",pagos.ContratoId);
+      
         connection.Open();
         res = Convert.ToInt32(command.ExecuteScalar());
         connection.Close();
@@ -114,28 +106,22 @@ return res;
 
 }
 
-public int Modificar(Inquilinos inquilino){
+public int Modificar(Pagos pago){
 int res = 0;
 using(MySqlConnection connection = new MySqlConnection(connectionString))
 {
-    string query = @"UPDATE inquilinos SET 
-    nombre= @nombre,
-    apellido = @apellido,
-    dni = @dni,
-    telefono = @telefono,
-    email = @email,
-    direccion = @direccion,
-    nacimiento = @nacimiento
+    string query = @"UPDATE pagos SET 
+    fecha_pago=@fecha_pago,
+    importe=@importe,
+    contratoid=@contratoid
     WHERE Id = @id; ";
     using(MySqlCommand command = new MySqlCommand (query,connection)){
-        command.Parameters.AddWithValue("@id",inquilino.Id);
-        command.Parameters.AddWithValue("@nombre",inquilino.Nombre);
-        command.Parameters.AddWithValue("@apellido",inquilino.Apellido);
-        command.Parameters.AddWithValue("@dni",inquilino.Dni);
-        command.Parameters.AddWithValue("@telefono",inquilino.Telefono);
-        command.Parameters.AddWithValue("@email",inquilino.Email);
-        command.Parameters.AddWithValue("@direccion",inquilino.Direccion);
-        command.Parameters.AddWithValue("@nacimiento",inquilino.Nacimiento);
+       
+        command.Parameters.AddWithValue("@fecha_pago",pago.Fecha_Pago);
+        command.Parameters.AddWithValue("@importe",pago.Importe);
+        command.Parameters.AddWithValue("@contratoid",pago.ContratoId);
+        command.Parameters.AddWithValue("@id",pago.Id);
+   
         connection.Open();
         res = command.ExecuteNonQuery();
         connection.Close();
@@ -146,14 +132,14 @@ using(MySqlConnection connection = new MySqlConnection(connectionString))
 return res;
 
 }
-public int Borrar(int id){
+public int Borrar(int Id){
 int res = 0;
 using(MySqlConnection connection = new MySqlConnection(connectionString))
 {
-    string query = @"DELETE FROM inquilinos WHERE id = @id;";
+    string query = @"DELETE FROM pagos WHERE id = @id;";
 
     using(MySqlCommand command = new MySqlCommand (query,connection)){
-       command.Parameters.AddWithValue("@id",id);
+       command.Parameters.AddWithValue("@id",Id);
         connection.Open();
         res = command.ExecuteNonQuery();
         connection.Close();

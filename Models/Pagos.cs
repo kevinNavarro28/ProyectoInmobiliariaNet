@@ -1,12 +1,22 @@
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Inmobiliaria.Models;
 
 public class Pagos
 {
-    public int NumDePago { get; set; }
-    public DateOnly Fecha_Pago { get ; set;}
+    public int Id { get; set; }
+    public DateTime Fecha_Pago { get ; set;}
     public Double Importe { get ; set;}
     
-    public int idContrato {get; set;}
+    [Display(Name="Contrato")]
+
+    public int ContratoId{get ; set;}
+    [ForeignKey(nameof(Id))]
+
+    public Contratos Contrato {get;set;}
+
 
 
     public Pagos(){

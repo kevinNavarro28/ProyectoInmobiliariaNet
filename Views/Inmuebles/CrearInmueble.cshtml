@@ -1,10 +1,16 @@
 @model Inmobiliaria.Models.Inmuebles
 
+
+
 @{
+    
+   
     ViewData["Title"] = "CrearInmueble";
+
+    var listaPropietario=(List<Propietarios>)ViewBag.Propietarios;
 }
 
-<h1>CrearInmueble</h1>
+<h1>Crear Un Inmueble</h1>
 
 <h4>Inmuebles</h4>
 <hr />
@@ -12,11 +18,7 @@
     <div class="col-md-4">
         <form asp-action="CrearInmueble">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
+           
             <div class="form-group">
                 <label asp-for="Tipo" class="control-label"></label>
                 <input asp-for="Tipo" class="form-control" />
@@ -53,18 +55,25 @@
                 <span asp-validation-for="Longitud" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdPropietadio" class="control-label"></label>
-                <input asp-for="IdPropietadio" class="form-control" />
-                <span asp-validation-for="IdPropietadio" class="text-danger"></span>
+                <label class="control-label">Propietario</label><br>
+                <select class="form-control" name="PropietarioId">
+
+                    @foreach (var item in listaPropietario)
+                    {
+                        <option value="@item.Id">@(item.Nombre+" "+item.Apellido) </option>
+                    }
+                </select>
+                <span asp-validation-for="PropietarioId" class="text-danger"></span>
+              
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+     <a asp-action="IndexIn"><i class="fa-solid fa-left-long fa-2xl" style="color: #005eff;"></i></a> 
 </div>
 

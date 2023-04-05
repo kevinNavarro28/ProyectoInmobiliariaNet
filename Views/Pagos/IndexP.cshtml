@@ -4,22 +4,22 @@
     ViewData["Title"] = "IndexP";
 }
 
-<h1>IndexP</h1>
+<h1>Lista de Pagos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CrearPAgo" class="btn btn-primary"><i class="fa-solid fa-person-circle-plus fa-xl" style="color: #000000;"></i></a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NumDePago)
+                @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Importe)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idContrato)
+                @Html.DisplayNameFor(model => model.ContratoId)
             </th>
             <th></th>
         </tr>
@@ -28,18 +28,25 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NumDePago)
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Importe)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.idContrato)
+                @Html.DisplayFor(modelItem => item.ContratoId)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+               <a href='@Url.Action("EditarPago", new { id = item.Id })' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-user-pen fa-lg" style="color: #315eaa;"></i>
+
+				</a>
+                  <a href='@Url.Action("DetallePago", new {id = item.Id})' class="btn btn-sm btn-info">
+										<i class="fa-solid fa-neuter fa-lg" style="color: #000000;"></i>
+
+				</a>
+                  <a href='@Url.Action("BorrarPago", new {id = item.Id})' class="btn btn-sm btn-danger">
+										<i class="fa-solid fa-user-xmark" style="color: #000000;"></i>
             </td>
         </tr>
 }
